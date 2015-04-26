@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: MonsieurLaDoulaise;
+    src: url(MonsieurLaDoulaise-Regular.ttf);
+}
+
+h1 a{
+    font-family: MonsieurLaDoulaise;
+    font-size: 40px;
+}
+
+h1 a:hover{
+    color: inherit;
+}
+
+#page2 .box img{
+    height: 50px;
+    border-radius: 0;
+}
+
+#page2 .box hr{
+    border-color: rgba(42, 174, 150, 0.3);
+}
+
+#page2 .slogan{
+    margin-bottom: 50px;
+}
+
+#page2 .box li{
+    margin-top: 5px;
+}
+
+#toTop{
+    bottom: 25px;
+}
+
+.companies img{
+    height: 50px;
+    background: #fff;
+}

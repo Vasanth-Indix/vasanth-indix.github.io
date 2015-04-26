@@ -1,21 +1,309 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Physics</title>
-    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="physicsjs-full-0.6.0.js"></script>
-    <!-- script type="text/javascript" src="bodies/circle.js"></script>
-    <script type="text/javascript" src="bodies/convex-polygon.js"></script>
-    <script type="text/javascript" src="bodies/rectangle.js"></script -->
-    <script type="text/javascript" src="physics-2.js"></script>
-    <link rel="stylesheet" type="text/css" href="physics.css">
-  </head>
-  <body>
-    <canvas id="viewport"></canvas>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="css/site.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.1.1.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/forms.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/tms-0.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.slider_wrapper')._TMS({
+					show:0,
+					pauseOnHover:false,
+					prevBu:'.prev',
+					nextBu:'.next',
+					playBu:false,
+					duration:800,
+					preset:'fade',
+					pagination:true,//'.pagination',true,'<ul></ul>'
+					pagNums:false,
+					slideshow:8000,
+					numStatus:false,
+					banners: 'fade',
+					waitBannerAnimation:false,
+					progressBar:false
+				});
+			});
+			$(document).ready(function(){
+				!function(){
+			var map=[]
+			 ,names=[]
+			 ,win=$(window)
+			 ,header=$('header')
+			 ,currClass
+			$('.content').each(function(n){
+			 map[n]=this.offsetTop
+			 names[n]=$(this).attr('id')
+			})
+			win
+			 .on('scroll',function(){
+				var i=0
+				while(map[i++]<=win.scrollTop());
+				if(currClass!==names[i-2])
+				currClass=names[i-2]
+				header.removeAttr("class").addClass(names[i-2])
+			 })
+			}(); });
+					function goToByScroll(id){
+				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+				}
+				$(document).ready(function(){
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+		</script>
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body class="">
+<!--==============================header=================================-->
+		<header class="page1">
+			<div class="container_12">
+				<div class="grid_12">
+					<h1><a href="/" onClick="goToByScroll('page1'); return false;">Vasanth Gopal</a></h1>
+					<div class="menu_block">
+						<nav class="">
+							<ul class="sf-menu">
+								<li class="current men"><a onClick="goToByScroll('page1'); return false;" href="#">Me </a> <strong class="hover"></strong></li>
+								<li class="men1"><a onClick="goToByScroll('page2'); return false;" href="#">Engineering</a><strong class="hover"></strong></li>
+								<li class=" men2"><a onClick="goToByScroll('page3'); return false;" href="#">Usability</a> <strong class="hover"></strong></li>
+								<li class=" men3"><a onClick="goToByScroll('page4'); return false;" href="#">History</a> <strong class="hover"></strong></li>
+								<li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">Contact</a> <strong class="hover"></strong></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+<!--=======content================================-->
+		<div id="page1" class="content">
+			<div class="ic">More Website Templates @ TemplateMonster.com - September 9, 2013!</div>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slider_wrapper">
+						<ul class="items">
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>Hey, am Vasanth Gopal</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>I am with <a href="http://www.indix.com" target="_blank">Indix.</a></h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>I create web and mobile apps.</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>I understand usability.</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="socials">
+						<a href="https://www.facebook.com/vasanthonline"></a>
+						<a href="https://twitter.com/vasanth_gopal"></a>
+						<a href="https://github.com/Vasanth-Indix"></a>
+						<a href="https://www.linkedin.com/pub/vasanth-gopal/26/406/941"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page2" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>I kickstart scalable apps by applying the most trending web technologies.</h3>
+						<div class="text1">
+							I create composable components using templates with simply styled interfaces and plug them together to create usable apps.
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/html5.png" alt="HTML 5">
+						<div class="text1">
+							<ul>
+								<hr>
+								<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+								<hr>
+								<li><a href="http://www.google.com/design/spec/material-design/introduction.html">Web components</a></li>
+								<hr>
+								<li><a href="https://mustache.github.io/">Mustache</a></li>
+								<li><a href="http://jade-lang.com/">Jade</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/css3.jpg" alt="CSS 3">
+						<div class="text1">
+							<ul>
+								<hr>
+								<li><a href="http://sass-lang.com/">SASS</a></li>
+								<li><a href="http://lesscss.org/">LESS</a></li>
+								<hr>
+								<li><a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/js.jpg" alt="Javascript">
+						<div class="text1">
+							<ul>
+								<hr>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">OOJS</a></li>
+								<hr>
+								<li><a href="http://backbonejs.org/">Backbone</a></li>
+								<li><a href="https://angularjs.org/">Angular</a></li>
+								<li><a href="https://facebook.github.io/react/">React</a></li>
+								<li><a href="http://requirejs.org/">Require JS</a></li>
+								<hr>
+								<li><a href="http://gulpjs.com/">Gulp</a></li>
+								<li><a href="http://bower.io/">Bower</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/www.jpg" alt="World wide web">
+						<div class="text1">
+							<ul>
+								<hr>
+								<li><a href="https://nodejs.org/">Node JS</a></li>
+								<li><a href="https://iojs.org/en/index.html">IO JS</a></li>
+								<hr>
+								<li><a href="https://www.meteor.com/">Meteor</a></li>
+								<hr>
+								<li><a href="http://rubyonrails.org/">Ruby on Rails</a></li>
+								<hr>
+								<li><a href="http://rubyonrails.org/">Phonegap</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page3" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>Usability</h3>
+						<div class="text1">
+							I believe in usability and work towards ease of use of products through simplistic visual design and constant user experience feedback.
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img1.png" alt="">
+						<div class="text1"><a href="javascript:void(0)">Design</a></div>I design software and have done wireframes, sketches and prototypes.
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img2.png" alt="">
+						<div class="text1"><a href="javascript:void(0)">Research</a></div>I use user behaviour tracking tools to understand user flow and ease of use.
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img3.png" alt="">
+						<div class="text1"><a href="javascript:void(0)">Delivery</a></div>I help in delivering products and have experience in project and product management.
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img4.png" alt="">
+						<div class="text1"><a href="javascript:void(0)">Consulting</a></div>I do consulting for technological choices in building scalable apps.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page4" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<h3>History</h3>
+				</div>
+				<div class="companies">
+					<div class="grid_4">
+						<img src="images/cit.png" alt="">
+						<div class="text1">Engineer</div>Am a computer science engineer form Coimbatore Institute of Technology.
+						<br>
+						<a href="http://cit.edu.in/">Go to Site</a>
+					</div>
+					<div class="grid_4">
+						<img src="images/open_text.jpg" alt="">
+						<div class="text1">Cordys (now OpenText)</div>Part of the Multi browser core team in providing complete cross browser support for the entire product seamlessly.
+						<br>
+						<a href="http://www.opentext.com/">Go to Site</a>
+					</div>
+					<div class="grid_4">
+						<img src="images/mowbly.png" alt="">
+						<div class="text1">Cloudpact</div>I kickstarted a mobile app platform for Cloudpact and specialized in Android and blackberry app development.
+						<br>
+						<a href="http://www.mowbly.com/">Go to Site</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page5" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>Get in Touch</h3>
+						<div class="text1">
+							Email me at <a href="mailto:vasanthgonline@gmail.com">vasanthgonline@gmail.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="copy">
+						<a onClick="goToByScroll('page1'); return false;" href="#">Vasanth Gopal</a>  &copy; 2015
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
 </html>
